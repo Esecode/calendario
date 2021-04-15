@@ -1,0 +1,197 @@
+/* lista de usuarios */
+
+* {
+  padding: 0;
+  margin: 0;
+}
+
+.user-list {
+  max-width: 180px;
+  float: left;
+}
+
+#resultado li {
+  list-style: none;
+  border: 1px solid #ccc;
+  padding: 10px;
+  float: left;
+  cursor: move;
+}
+
+/* Calendario */
+
+.calendario {
+  display: block;
+  position: relative;
+  margin-left: 19%;
+  margin-right: 6%;
+}
+.calendario .container-flex {
+  display: flex;
+  flex-direction: row;
+  flex-wrap: nowrap;
+  align-items: stretch;
+  align-content: stretch;
+}
+.calendario .item-flex {
+  flex-grow: 1;
+  height: 80px;
+  flex-grow: 1;
+  flex-basis: 0;
+}
+.calendario .cRowControls .currentYear {
+  font-size: 1.1em;
+}
+.calendario .cRowControls .currentMonth {
+  font-size: 1.6em;
+  line-height: 0.8em;
+}
+.calendario .cRowDias {
+  background-color: transparent;
+  color: #fff;
+  font-size: 1em;
+}
+.calendario .cRowDias .item-flex {
+  padding-top: 15px;
+  height: 50px;
+  background-color: gray;
+}
+.calendario .cRowDias {
+  background-color: #999;
+  color: #fff;
+  font-size: 0.8em;
+}
+.calendario .dia {
+  display: block;
+  clear: both;
+  width: auto;
+  height: auto;
+  min-height: 20px;
+  overflow: auto;
+  background-color: #f1f1f1;
+  color: #000;
+  font-size: 0.75em;
+  text-align: right;
+  border-bottom: 1px solid #ccc;
+  padding-right: 5px;
+}
+button.badge {
+  border: none;
+  cursor: pointer;
+}
+
+/* Area del Listado de Eventos */
+.listadoEventos {
+  display: block;
+  position: absolute;
+  left: 0;
+  right: 0;
+  top: 0;
+  bottom: 0;
+  z-index: 888;
+  background-color: #f1f1f1;
+  display: none;
+  overflow: auto;
+}
+.btnCloseCalendar {
+  position: absolute;
+  right: 5px;
+  top: 5px;
+}
+
+.calendario {
+  display: block;
+  position: relative;
+}
+.calendario .container-flex {
+  display: flex;
+  flex-direction: row;
+  flex-wrap: nowrap;
+  align-items: stretch;
+  align-content: stretch;
+}
+.calendario .item-flex {
+  flex-grow: 1;
+  border: solid 1px #ccc;
+  height: 80px;
+  flex-grow: 1;
+  flex-basis: 0;
+}
+.calendario .cRowControls .currentYear {
+  font-size: 1.1em;
+}
+.calendario .cRowControls .currentMonth {
+  font-size: 1.6em;
+  line-height: 0.8em;
+}
+.calendario .cRowDias {
+  background-color: #999;
+  color: #fff;
+  font-size: 1em;
+}
+.calendario .cRowDias .item-flex {
+  padding-top: 15px;
+  height: 30px;
+}
+.calendario .cRowDias {
+  background-color: #999;
+  color: #fff;
+  font-size: 0.8em;
+}
+.calendario .dia {
+  display: block;
+  clear: both;
+  width: auto;
+  height: auto;
+  min-height: 20px;
+  overflow: auto;
+  background-color: #f1f1f1;
+  color: #000;
+  font-size: 0.75em;
+  text-align: right;
+  border-bottom: 1px solid #ccc;
+  padding-right: 5px;
+}
+button.badge {
+  border: none;
+  cursor: pointer;
+}
+
+/* Area del Listado de Eventos */
+.listadoEventos {
+  display: block;
+  position: absolute;
+  left: 0;
+  right: 0;
+  top: 0;
+  bottom: 0;
+  z-index: 888;
+  background-color: #f1f1f1;
+  display: none;
+  overflow: auto;
+}
+.btnCloseCalendar {
+  position: absolute;
+  right: 5px;
+  top: 5px;
+}
+
+.text-center {
+    text-align: center !important;
+}
+
+.btn-block {
+    display: block;
+    width: 100%;
+}
+
+.btn-primary {
+    color: #fff;
+    background-color: gray;
+    cursor: pointer;
+}
+
+.drag-zone {
+    cursor: pointer;
+    user-select: none;
+}

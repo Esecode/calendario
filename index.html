@@ -1,0 +1,194 @@
+<!DOCTYPE html>
+<html lang="en">
+
+<head>
+    <meta charset="UTF-8">
+    <title>Document</title>
+    <link rel="stylesheet" href="./style.css">
+</head>
+
+<body>
+    <section class="search">
+      <div>
+        <input type="text" name="search" id="search" placeholder="Search" class="form-control" />
+    </section>
+
+      <div class="container">
+        <ul class="list-group" id="result"></ul>
+        <br />
+        <section class="user-list">
+          <ul id="resultado" draggable="true"></ul>
+        </section>
+      </div>
+
+     <!-- calendario -->
+<div class="calendario">
+  <div class="container-flex cRowControls">
+    <div class="item-flex text-center">
+      <button type="button" class="btn btn-primary btn-block item-flex" onclick="mesAnterior()">&lt;</button>
+    </div>
+    <div class="item-flex text-center" style="padding-top:10px">
+      <span class="currentYear"></span> <br><span class="currentMonth"></span>
+    </div>
+    <div class="item-flex text-center">
+      <button type="button" class="btn btn-primary btn-block item-flex" onclick="mesSiguiente()">&gt;</button>
+    </div>
+  </div>
+  <div class="container-flex cRowDias">
+    <div class="item-flex text-center">Domingo</div>
+    <div class="item-flex text-center">Lunes</div>
+    <div class="item-flex text-center">Martes</div>
+    <div class="item-flex text-center">Miércoles</div>
+    <div class="item-flex text-center">Jueves</div>
+    <div class="item-flex text-center">Viernes</div>
+    <div class="item-flex text-center">Sábado</div>
+  </div>
+  <div class="container-flex cRow1">
+    <div class="item-flex text-center">
+      <div class="dia"><span class="cBox box1" id="drop-zone"></span></div>
+    </div>
+    <div class="item-flex text-center">
+      <div class="dia"><span class="cBox box2" id="drop-zone"></span></div>
+    </div>
+    <div class="item-flex text-center">
+      <div class="dia"><span class="cBox box3"></span></div>   
+    </div>
+    <div class="item-flex text-center">
+      <div class="dia"><span class="cBox box4" ></span></div>
+    </div>
+    <div class="item-flex text-center" id="drop">
+      <div class="dia"><span class="cBox box5"></span></div>
+      <button type="button" class="badge badge-success" onclick="consultarEventosDelDia(this)">1 Evento</button>
+    </div>
+    <div class="item-flex text-center">
+      <div class="dia"><span class="cBox box6"></span></div>
+    </div>
+    <div class="item-flex text-center">
+      <div class="dia"><span class="cBox box7"></span></div>
+      <button type="button" class="badge badge-success" onclick="consultarEventosDelDia(this)">6 Eventos</button>
+    </div>
+  </div>
+  <div class="container-flex cRow2">
+    <div class="item-flex text-center">
+      <div class="dia"><span class="cBox box8"></span></div>
+    </div>
+    <div class="item-flex text-center">
+      <div class="dia"><span class="cBox box9"></span></div>
+    </div>
+    <div class="item-flex text-center">
+      <div class="dia"><span class="cBox box10"></span></div>
+    </div>
+    <div class="item-flex text-center">
+      <div class="dia"><span class="cBox box11"></span></div>
+    </div>
+    <div class="item-flex text-center">
+      <div class="dia"><span class="cBox box12"></span></div>
+    </div>
+    <div class="item-flex text-center">
+      <div class="dia"><span class="cBox box13"></span></div>
+    </div>
+    <div class="item-flex text-center">
+      <div class="dia"><span class="cBox box14"></span></div>
+    </div>
+  </div>
+  <div class="container-flex cRow3">
+    <div class="item-flex text-center">
+      <div class="dia"><span class="cBox box15"></span></div>
+    </div>
+    <div class="item-flex text-center">
+      <div class="dia"><span class="cBox box16"></span></div>
+    </div>
+    <div class="item-flex text-center">
+      <div class="dia"><span class="cBox box17"></span></div>
+    </div>
+    <div class="item-flex text-center">
+      <div class="dia"><span class="cBox box18"></span></div>
+    </div>
+    <div class="item-flex text-center">
+      <div class="dia"><span class="cBox box19"></span></div>
+    </div>
+    <div class="item-flex text-center">
+      <div class="dia"><span class="cBox box20"></span></div>
+    </div>
+    <div class="item-flex text-center">
+      <div class="dia"><span class="cBox box21"></span></div>
+    </div>
+  </div>
+  <div class="container-flex cRow4">
+    <div class="item-flex text-center">
+      <div class="dia"><span class="cBox box22"></span></div>
+    </div>
+    <div class="item-flex text-center">
+      <div class="dia"><span class="cBox box23"></span></div>
+    </div>
+    <div class="item-flex text-center">
+      <div class="dia"><span class="cBox box24"></span></div>
+    </div>
+    <div class="item-flex text-center">
+      <div class="dia"><span class="cBox box25"></span></div>
+    </div>
+    <div class="item-flex text-center">
+      <div class="dia"><span class="cBox box26"></span></div>
+    </div>
+    <div class="item-flex text-center">
+      <div class="dia"><span class="cBox box27"></span></div>
+    </div>
+    <div class="item-flex text-center">
+      <div class="dia"><span class="cBox box28"></span></div>
+    </div>
+  </div>
+  <div class="container-flex cRow5">
+    <div class="item-flex text-center">
+      <div class="dia"><span class="cBox box29"></span></div>
+    </div>
+    <div class="item-flex text-center">
+      <div class="dia"><span class="cBox box30"></span></div>
+    </div>
+    <div class="item-flex text-center">
+      <div class="dia"><span class="cBox box31"></span></div>
+    </div>
+    <div class="item-flex text-center">
+      <div class="dia"><span class="cBox box32"></span></div>
+    </div>
+    <div class="item-flex text-center">
+      <div class="dia"><span class="cBox box33"></span></div>
+    </div>
+    <div class="item-flex text-center">
+      <div class="dia"><span class="cBox box34"></span></div>
+    </div>
+    <div class="item-flex text-center">
+      <div class="dia"><span class="cBox box35"></span></div>
+    </div>
+  </div>
+  <div class="container-flex cRow6">
+    <div class="item-flex text-center">
+      <div class="dia"><span class="cBox box36"></span></div>
+    </div>
+    <div class="item-flex text-center">
+      <div class="dia"><span class="cBox box37"></span></div>
+    </div>
+    <div class="item-flex text-center">
+      <div class="dia"><span class="cBox box38"></span></div>
+    </div>
+    <div class="item-flex text-center">
+      <div class="dia"><span class="cBox box39"></span></div>
+    </div>
+    <div class="item-flex text-center">
+      <div class="dia"><span class="cBox box40"></span></div>
+    </div>
+    <div class="item-flex text-center">
+      <div class="dia"><span class="cBox box41"></span></div>
+    </div>
+    <div class="item-flex text-center">
+      <div class="dia"><span class="cBox box42"></span></div>
+    </div>
+  </div>
+</div>
+<!-- fin calendario -->
+
+
+<script src='https://cdnjs.cloudflare.com/ajax/libs/jquery/3.3.1/jquery.min.js'></script><script src="./script.js"></script>
+
+</body>
+
+</html>
